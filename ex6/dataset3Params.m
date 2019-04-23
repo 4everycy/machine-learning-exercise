@@ -33,7 +33,7 @@ for i = 1:len
        model= svmTrain(X, y, C_temp, @(x1, x2) gaussianKernel(x1, x2, sigma_temp));
        pred = svmPredict(model, Xval);
        error = mean(double(pred ~= yval));
-       if (error < min) 
+       if error < min 
            min = error;
            C = C_temp;
            sigma = sigma_temp;

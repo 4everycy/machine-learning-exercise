@@ -49,6 +49,7 @@ fprintf('\nExtracting features from sample email (emailSample1.txt)\n');
 
 % Extract Features
 file_contents = readFile('emailSample1.txt');
+
 word_indices  = processEmail(file_contents);
 features      = emailFeatures(word_indices);
 

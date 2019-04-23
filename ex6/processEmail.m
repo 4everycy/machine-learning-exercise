@@ -25,8 +25,8 @@ word_indices = [];
 email_contents = lower(email_contents);
 
 % Strip all HTML
-% Looks for any expression that starts with < and ends with > and replace
-% and does not have any < or > in the tag it with a space
+% Looks for any expression that starts with < and ends with > and does not
+% have any < or > in the tag and replace it with a space
 email_contents = regexprep(email_contents, '<[^<>]+>', ' ');
 
 % Handle Numbers
@@ -96,13 +96,11 @@ while ~isempty(email_contents)
     % Note: You can use strcmp(str1, str2) to compare two strings (str1 and
     %       str2). It will return 1 only if the two strings are equivalent.
     %
-
-
-
-
-
-
-
+    for i = 1:length(vocabList)
+        if strcmp(str, vocabList{i})
+            word_indices = [word_indices; i];    
+        end
+    end
 
 
 
