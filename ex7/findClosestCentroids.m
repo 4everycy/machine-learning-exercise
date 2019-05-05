@@ -20,6 +20,13 @@ idx = zeros(size(X,1), 1);
 %
 % Note: You can use a for-loop over the examples to compute this.
 %
+d = zeros(K, 1);
+m = size(X, 1);
+for i = 1:m
+    for j = 1:K
+        d(j) = sum((X))
+    end
+end
 
 
 
